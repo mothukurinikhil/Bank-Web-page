@@ -2,32 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="styles.css">
     <title>Form Validation</title>
 
-    <script>
-        function validateform() {
-            var x = document.getElementById('t1').value;
-
-            var atposition = x.indexOf("@");
-            var dotposition = x.lastIndexOf(".");
-
-            if (atposition < 1 ||
-                dotposition < atposition + 2 ||
-                dotposition + 2 >= x.length) {
-
-                alert("Please enter a valid email");
-                return false;
-            }
-
-            alert("Valid email");
-            return true;
-        }
-    </script>
 </head>
 
 <body>
-    <form name="f1" action="server.org" onsubmit="return validateform()">
+    <form name="f1">
         Email:
         <input type="text" id="t1" name="email"><br>
 
